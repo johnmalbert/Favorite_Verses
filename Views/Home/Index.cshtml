@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@using QuotingDojo.Models
+@model Quote
+
+<div class="text-center">
+    <h1 class="display-4">Favorite Verses!</h1>
+</div>
+<div class="container">
+    <form action="post-quote" method="post">
+    <div class='form-group'>
+        <span asp-validation-for='Name'></span>
+        <label asp-for='Name'>Reference</label>
+        <input class='form-control' asp-for='Name' placeholder='Enter Reference'>
+    </div> 
+    <div class='form-group'>
+        <span asp-validation-for='UserQuote'></span>
+        <label asp-for='UserQuote'>Verse</label>
+        <input class='form-control' asp-for='UserQuote'  placeholder='Enter Verse'>
+    </div>
+    <div class="row">
+        <div class="col"><button type="submit" class="btn btn-primary">Submit Verse</button></div>
+        </form>
+        <div class="col text-right"><a href="/Quotes"> Skip to Verses</a></div>
+    </div> 
+</div>
